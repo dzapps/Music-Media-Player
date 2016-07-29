@@ -1,0 +1,806 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+*, *:before, *:after{
+	box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "Champagne & Limousines";
+    src: url("./assets/fonts/champagne_&_limousines/Champagne_&_Limousines.ttf");
+}
+@font-face {
+    font-family: "Champagne & Limousines";
+    src: url("./assets/fonts/champagne_&_limousines/Champagne_&_Limousines_Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Champagne & Limousines Italic";
+    src: url("./assets/fonts/champagne_&_limousines/Champagne_&_Limousines_Italic.ttf");
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: "Champagne & Limousines Italic";
+    src: url("./assets/fonts/champagne_&_limousines/Champagne_&_Limousines_Bold_Italic.ttf");
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+.box-opa{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 105%;
+	background: #000000;
+	opacity: 0.7;
+}
+
+
+#player{
+	width: 100%;
+	height: 100%;
+	min-width: 1100px;
+
+}
+
+/***************** ACTION BAR ************/
+#actionBar{
+	float: left;
+	width: 100%;
+	height: 70px;
+}
+
+header .title{
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+
+.config{
+	position: relative;
+	float: right;
+	right: 20px;
+}
+
+.config i{
+	cursor: pointer;
+}
+
+
+#actionBar .controls{
+	height: 70px;
+	width: 100%;
+}
+
+/**************** BODY *********************/
+
+#body{
+	float: left;
+	width: 100%;
+	min-width: 900px;
+}
+
+#mediaMenu{
+	float: left;
+	width: 250px;
+	min-height: 100%;
+}
+
+#mediaMenu .mediaCategory{
+	display: block;
+}
+
+#mediaMenu .mediaCatItem .title{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+	cursor: pointer;
+}
+
+#mediaMenu .mediaCatItem .catMenu{
+	display: none;
+}
+
+#mediaMenu .mediaCatItem .catMenu li{
+	padding: 5px 0px 5px 30px;
+	font-size: 90%;
+	cursor: pointer;
+}
+
+
+#mediaCover{
+	width: 100%;
+	padding: 10px;
+}
+
+#mediaCover img{
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+}
+
+#mediaVideo{
+	width: 100%;
+	height: 230px;
+}
+
+#mediaHolder{
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
+#upperBar{
+	float:left;
+	width: 100%;
+	height: 50px;
+}
+
+.content-org-btns{
+	background: none !important;
+	float: right;
+	width: max-content;
+	height: 100%;
+	border: none !important;
+}
+
+.content-org-btns div, #upperBar .content-search{
+	float: right;
+	width: 150px;
+	height: 30px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.content-org-btns div:hover{
+	cursor: pointer;
+}
+
+
+
+#upperBar .content-search{
+	margin-left: 20px;
+	margin-right: 30px;
+	width: 300px;
+}
+
+#upperBar .cont-i-search{
+	float: left;
+	margin-left: 10px;
+	width: 30px;
+	margin-top: 0;
+	height: 28px;
+	border: none;
+}
+
+
+#upperBar .cont-i-search:hover{
+	cursor: pointer;
+}
+
+#upperBar #i-search{
+	float: left;
+	width: 20px;
+	margin-top: 0;
+	height: 28px;
+	border: none;
+}
+
+#upperBar #i-arr-search{
+	float: left;
+	width: 10px;
+	margin-top: 0;
+	height: 28px;
+	border: none;
+}
+
+#upperBar #busqueda{
+	float: left;
+	width: 250px;
+	margin-left: 8px;
+	text-align: left;
+	margin-top: 0;
+	border: none;
+	height: 28px;
+}
+
+#upperBar #busqueda:focus{
+	outline: none;
+}
+
+#mediaWrapper{
+	float:left;
+	width: 70%;
+	min-width: 400px;
+	padding-top: 50px;
+	padding-left: 10px;
+}
+
+#playList{
+	float:left;
+	width: 30%;
+	min-width: 250px;
+}
+
+#controles div{
+	display: inline-block;
+}
+
+#actionButtons{
+	float: left;
+	position: relative;
+	margin-left: 1%;
+	width: 204px;
+	height: 70px;
+}
+#actionButtons div{
+	margin-right: 3px;
+}
+.vboton{
+	float: left;
+	margin-top: 10px;
+	cursor: pointer;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+}
+
+.vboton i{
+	position:relative;
+}
+
+.prevBtn i{
+	top: calc(50% - 10px);
+	left: calc(50% - 10px);
+}
+
+.playBtn i{
+	top: calc(50% - 10px);
+	left: calc(50% - 6px);
+}
+
+.stopBtn i{
+	top: calc(50% - 10px);
+	left: calc(50% - 7px);
+}
+
+.nextBtn i{
+	top: calc(50% - 10px);
+	left: calc(50% - 6px);
+}
+
+#funkButtons{
+	float: right;
+	width: 310px;
+}
+
+#funkButtons div{
+	display: inline-block;
+}
+
+#volButtons{
+	width: 150px;
+	height: 70px;
+
+}
+
+#playingButtons{
+	width: 150px;
+	height: 70px;
+}
+
+.volumen{
+	margin-top: 15px !important;
+	width: 40px !important;
+	height: 40px !important;
+}
+
+.volumen i {
+	top: calc(50% - 9px);
+	left: calc(50% - 7px);
+}
+
+.shuffle{
+	margin-top: 15px !important;
+	margin-left: 10px !important;
+	width: 40px !important;
+	height: 40px !important;
+}
+
+.shuffle i {
+	top: calc(50% - 9px);
+	left: calc(50% - 8px);
+}
+
+.repeat{
+	margin-top: 15px !important;
+	margin-left: 5px !important;
+	width: 40px !important;
+	height: 40px !important;
+}
+
+.repeat i {
+	top: calc(50% - 9px);
+	left: calc(50% - 8px);
+}
+
+
+.abrirCerrar{
+	margin-top: 15px !important;
+	margin-left: 5px !important;
+	width: 40px !important;
+	height: 40px !important;
+}
+
+.abrirCerrar i {
+	top: calc(50% - 9px);
+	left: calc(50% - 8px);
+}
+
+
+#barraVolumen{
+	float: left;
+	position: relative;
+	width: 100px;
+	height: 10px;
+	margin-top: 30px;
+	margin-left: 10px;
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+.progresoVolumen, #cargaVolumen{
+	position: absolute;
+	width: 100%; height: 100%; 
+	border-radius: 50px;
+}
+
+
+#content-timeBar{
+	float: left;
+	width: 70%;
+	height: 100%;
+}
+
+#timeBar{
+	display: none;
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 100%;
+	min-width: 250px;
+	height: 10px;
+	cursor: pointer;
+	border-radius: 50px;
+}
+
+
+
+#playingSongName{
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#timePlayingSong{
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#progreso, #carga{
+	position: absolute;
+	width: 0; height: 100%;
+	border-radius: 50px;
+}
+
+
+#ball-progress{
+	display: none;
+	position: relative;
+	top: -5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+
+
+
+.enCola{
+	padding: 10px;
+	cursor: pointer;
+	transform: translateX(-1px);
+	height: 70px;
+}
+
+.enCola:hover{
+	font-size: 120%;
+}
+
+.enCola .artist, .enCola .album{
+	font-size: 70%;
+	display: inline-block;
+}
+
+.isPlaying{
+	font-weight: bold;
+}
+
+.enCola .content-info{
+	float: left;
+	width: max-content;
+}
+
+.enCola .icon-isPlay{
+	float: left;
+	width: 30px;
+	height: 50px;
+}
+.enCola .icon-isPlay i{
+	line-height: 50px;
+}
+
+.cancionesTodo .icon-isPlay{
+	float: left;
+	width: 30px;
+	height: 30px;
+}
+.cancionesTodo .icon-isPlay i{
+	line-height: 30px;
+	margin-left: 10px;
+}
+
+.contArtAlbmGenCan .icon-isPlay{
+	float: left;
+	width: 30px;
+	height: 23px;
+}
+.contArtAlbmGenCan .icon-isPlay i{
+	line-height: 23px;
+	margin-left: 10px;
+}
+
+#loader{
+	display: none;
+	position: absolute;
+	width: 30%;
+	top: 48%;
+	left: 35%;
+}
+
+#loader .loadingBarHolder{
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;
+}
+#loader .progress{
+	width: 0%;
+	height: 100%;
+}
+#loader .number{
+	margin: -11px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+
+.listWrapper{
+	display: inline-block;
+	margin: 20px;
+	width: 200px;
+	height: 200px;
+	background: black;
+	visibility: visible;
+  	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  	-webkit-backface-visibility: hidden;
+  	backface-visibility: hidden;
+  	-moz-osx-font-smoothing: grayscale;
+  	-moz-transition: all 0.5s;
+  	-webkit-transition: all 0.5s;
+  	-o-transition: all 0.5s;
+  	transition: all 0.5s;
+}
+
+.listWrapper img{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	
+}
+
+.listWrapper:hover{
+	-ms-transform: scale(1.1); /* IE 9 */
+	-moz-transform: scale(1.1); /* Chrome, Safari, Opera */
+	-webkit-transform: scale(1.1); /* Mozilla */
+		transform: scale(1.1);
+}
+
+.listWrapper .title-lw{
+	text-align: center;
+}
+
+.artalbmgencaTodo .name-text{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+
+.artalbmgencaTodo{
+	display: inline-block;
+	float: left;
+}
+
+.listTodo{
+	display: inline-block;
+	margin: 10px;
+	width: 200px;
+	height: 200px;
+	background: black;
+	visibility: visible;
+	-moz-transition: all 0.5s;
+  	-webkit-transition: all 0.5s;
+  	-o-transition: all 0.5s;
+  	transition: all 0.5s;
+}
+
+.listTodo img{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	
+}
+
+.listTodo:hover{
+	-ms-transform: scale(1.1); /* IE 9 */
+	-moz-transform: scale(1.1); /* Chrome, Safari, Opera */
+	-webkit-transform: scale(1.1); /* Mozilla */
+		transform: scale(1.1);
+}
+
+.arrow-up {
+	display: none;
+  	width: 0; 
+  	height: 0; 
+  	margin-left: calc(50% - 15px);
+}
+
+.artalbmgencaTodo .contenido{
+	position: absolute;
+	display: none;
+	min-height: 300px;
+	padding: 10px;
+}
+
+.artalbmgencaTodo .contenido .cabezote{
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+.artalbmgencaTodo .contenido .cabezote .titulo{
+	position: relative;
+	top: calc(50% - 14px);
+}
+
+.artalbmgencaTodo .contenido .contArtAlbmGenCan{
+	width: 400px;
+	padding: 10px;
+	-moz-transition: all 0.5s;
+  	-webkit-transition: all 0.5s;
+  	-o-transition: all 0.5s;
+  	transition: all 0.5s;
+}
+
+.artalbmgencaTodo .contenido .contArtAlbmGenCan div{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.artalbmgencaTodo .contenido .contArtAlbmGenCan:hover{
+	font-size: 110%;
+	cursor: pointer;
+}
+
+.artalbmgencaTodo > div > div > div{
+	padding: 0;
+	border-bottom: 0;
+}
+
+.upCan{
+	width: 100%;
+	height: 30px;
+	margin-left: 30px;
+}
+
+.upCan-divs{
+	display: inline-block;
+	width: 200px;
+	height: 30px;
+	padding-left: 10px;
+}
+
+.cancionesTodo{
+	width: 100%;
+	height: 30px;
+}
+
+.listCanciones{
+	width: 100%;
+	height: 30px;
+}
+
+.listCanciones:hover{
+	cursor: pointer;
+}
+
+.cancionesTodo .name-text, .cancionesTodo .artist-text, .cancionesTodo .album-text, .cancionesTodo .genre-text{
+	display: inline-block;
+	width: 200px;
+	padding-left: 10px;
+}
+
+.content-themes{
+	position: absolute;
+	display: none;
+	left: 25%;
+	top: 160px;
+	width: 960px;
+	height: 500px;
+	opacity: 1;
+	/*border: 1px solid white;*/
+}
+
+.box-themes{
+	float: left;
+	width: 180px;
+}
+.box-themes div{
+	margin: auto;	
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	cursor: pointer;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+
+.box-themes div:hover{
+	-ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+    -moz-transform: scale(1.1); /* IE 9 */
+    transform: scale(1.1);
+}
+
+.black-golden-theme{
+	background: #282828;
+	border: 15px solid #D28251;
+}
+
+.white-fresh-theme{
+	background: #FFFFFF;
+	border: 15px solid #33D59C;
+}
+
+.text-themes-fresh{
+	font-family: 'Brizzush Rough';
+	font-size: 30px;
+}
+
+.text-themes-blackGolden{
+	font-family: 'Dream American Diner Demo';
+	font-size: 22px;
+	margin-top: 10px;
+}
+
+.text-themes-captainAmerica{
+	font-family: 'American Captain';
+	font-size: 30px;
+	margin-top: 5px;
+}
+
+.text-themes-ironMan{
+	font-family: 'IRON MAN OF WAR 002 NCV';
+	font-size: 30px;
+	margin-top: 5px;
+}
+
+.text-themes-hulk{
+	font-family: 'HulkBusters';
+	font-size: 30px;
+	margin-top: 5px;
+}
+
+.captain-america-theme{
+	background-image: url("../assets/images/captainAmericaArt.png");
+	background-size: 100% 100%;
+}
+
+.iron-man-theme{
+	background-image: url("../assets/images/ironManArt.png");
+	background-size: 100% 100%;
+}
+
+.hulk-theme{
+	background-image: url("../assets/images/hulk.png");
+	background-size: 100% 100%;
+}
+
+.text-themes{
+	color: white;
+}
+
+.close-themes{
+	position: absolute;
+	top: 80px;
+	right: 550px;
+}
+
+.close-themes i{
+	cursor: pointer;
+}
+
+
+	/* Pulse Grow */
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.hvr-pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+
+	@media  screen and (max-width: 1250px){
+		#busqueda{
+			position: absolute;
+			display: none;
+		}
+	}
+
+
+
+
+
+

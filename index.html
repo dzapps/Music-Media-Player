@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Reproductor Multimedia</title>
+		<meta name="description" content="Foo Content">
+		<meta name="author" content="afbotero">
+		<link rel="shortcut icon" type="image/png" href="public/assets/favicon/music_hover.png"/>
+		<link rel="stylesheet" href="public/styles/style.css">
+		<link rel="stylesheet" href="public/styles/themes.css">
+		<link rel="stylesheet" href="public/font-awesome-4.6.3/css/font-awesome.min.css">
+		<script src="public/jQuery/jquery-3.0.0.min.js"></script>
+		<script src="public/id3/id3-minimized.js"></script>
+		<script src="public/js/ui-logic.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="title title-fresh">Reproductor Multimedia - Andres Felipe Botero
+			<div class="config config-fresh">
+				<i class="fa fa-eye fa-lg hvr-pulse-grow" aria-hidden="true"></i>
+			</div>
+			</div>
+		</header>
+
+
+		<div id="loader" class="loader-fresh">
+			<div class="loadingBarHolder">
+				<div class="progress"></div>
+				<div class="number">0%</div>
+			</div>
+		</div>
+
+		<div id="player">
+			
+			<div id="actionBar">		
+				<div class="controls controls-fresh">
+					<div id="actionButtons">
+					<div class="vboton vboton-fresh prevBtn">
+						<i class="fa fa-backward" aria-hidden="true"></i>
+					</div>
+					<div class="vboton vboton-fresh playBtn">
+						<i class="fa fa-play" aria-hidden="true"></i>
+					</div>
+					<div class="vboton vboton-fresh stopBtn">
+						<i class="fa fa-stop" aria-hidden="true"></i>
+					</div>
+					<div class="vboton vboton-fresh nextBtn">
+						<i class="fa fa-forward" aria-hidden="true"></i>
+					</div>
+
+					</div>
+					<div id="content-timeBar">
+						<div id="playingSongName" class="playingSongName-fresh"></div>
+						<div id="timeBar" class="timeBar-fresh">
+							<div id="carga"></div>
+							<div id="progreso" class="progreso-fresh"></div>
+							<div id="ball-progress" class="ball-progress-fresh"></div>
+						</div>
+						<div id="timePlayingSong" class="timePlayingSong-fresh"></div>
+					</div>
+					
+
+					<div id="funkButtons">
+						<div id="volButtons">
+							<div class="vboton vboton-fresh volumen">
+								<i class="fa fa-volume-up" aria-hidden="true"></i>
+							</div>
+							<div id="barraVolumen">
+								<div id="cargaVolumen" class="cargaVolumen-fresh"></div>
+								<div class="progresoVolumen progresoVolumen-fresh"></div>
+							</div>
+						</div>
+						<div id="playingButtons">
+							<div class="vboton vboton-fresh shuffle">
+								<i class="fa fa-random" aria-hidden="true"></i>
+							</div>
+							<div class="vboton vboton-fresh repeat">
+								<i class="fa fa-repeat" aria-hidden="true"></i>
+							</div>
+							<div class="vboton vboton-fresh abrirCerrar">
+								<i class="fa fa-arrow-up" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+
+				<div class='content-themes'>
+					<div class="box-themes">
+						<div class='white-fresh-theme'></div>
+						<p align="center" class="text-themes text-themes-fresh">White Fresh</p>
+					</div>
+					<div class="box-themes">
+						<div class='black-golden-theme'></div>
+						<p align="center" class="text-themes text-themes-blackGolden">Black Golden</p>
+					</div>
+					<div class="box-themes">
+						<div class='captain-america-theme'></div>
+						<p align="center" class="text-themes text-themes-captainAmerica">Captain America</p>
+					</div>
+					<div class="box-themes">
+						<div class='iron-man-theme'></div>
+						<p align="center" class="text-themes text-themes-ironMan">Iron Man</p>
+					</div>	
+					<div class="box-themes">
+						<div class='hulk-theme'></div>
+						<p align="center" class="text-themes text-themes-hulk">Hulk</p>
+					</div>		
+				</div>
+				
+			</div>
+
+			<div id="body">
+				<div id="mediaMenu" class="mediaMenu-fresh">
+					<div id="mediaCover" class="mediaCover-fresh">
+						<img src="" alt="">
+					</div>
+					<div class="mediaCategory">
+						<div class="mediaCatItem mediaCatItem-fresh">
+							<div class="title">Imágenes</div>
+							<div class="catMenu">
+								<ul>
+									<li>Canciones</li>
+									<li>Listas de reproducción</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="mediaCategory">
+						<div class="mediaCatItem mediaCatItem-fresh">
+							<div class="title">Música</div>
+							
+							<div class="catMenu">
+								<ul>
+									<li>Canciones</li>
+									<li>Listas de reproducción</li>
+								</ul>
+							</div>
+							<audio src=""></audio>
+						</div>
+					</div>
+
+					<div id="mediaVideo">
+						
+					</div>
+				</div>
+
+				<div id="mediaHolder">
+					
+					<div id="upperBar" class="upperBar-fresh">
+						<div class="content-search">
+							<div class="cont-i-search">
+								<div id="i-search">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</div>
+								<div id="i-arr-search">
+									<i class="fa fa-caret-down" aria-hidden="true"></i>
+								</div>
+							</div>
+							<div id="busqueda" class="busqueda-fresh" contentEditable="true"></div>
+						</div>
+						
+						<div class="content-org-btns">
+							<div class="canciones">Canciones</div>
+							<div class="albums">Álbumes</div>
+							<div class="artistas">Artistas</div>
+							<div class="generos">Género</div>
+						</div>
+					</div>
+					<div id="mediaWrapper" class="mediaWrapper-fresh">
+					</div>
+					<div id="playList" class="playList-fresh"></div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="public/js/audio-logic.js"></script>
+
+
+
+
+
+		<footer></footer>
+	</body>
+</html>
